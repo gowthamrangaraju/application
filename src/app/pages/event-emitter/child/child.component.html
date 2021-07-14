@@ -1,0 +1,10 @@
+
+<div>
+    <h2>Child Component</h2>
+    <div>
+        <span><input type="textbox" [(ngModel)]='emitterName'></span>
+        <button (click)="sendToParent(emitterName)">sendToParent</button>
+    </div>
+</div>
+
+<div>{{emitterName}}</div>

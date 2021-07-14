@@ -1,0 +1,27 @@
+<div class="Userinfo-container">
+    <mat-card class="Userinfo-card" *ngIf="authService.currentUser">
+        <mat-card-header>
+            <mat-card-title>
+                {{title}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="Userinfo-card-content">
+
+            <div>
+                <span>User : </span>
+                <span>{{authService.currentUserName}}</span>
+            </div>
+            <div>
+                <span>User id : </span>
+                <span>{{authService.currentUserId}}</span>
+            </div>
+            
+            <div>
+                <button mat-raised-button color="warn" (click)="logout()">
+                    <mat-icon>logout</mat-icon> Logout
+                </button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

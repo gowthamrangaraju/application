@@ -1,0 +1,35 @@
+
+<div class="grid-container">
+    <h1 class="mat-h1">Event Emitter</h1>
+    <mat-grid-list cols="2" rowHeight="350px">
+      <mat-grid-tile >
+        <mat-card class="event-card">
+          <mat-card-header>
+            <mat-card-title>
+              Parent child Data passing
+            </mat-card-title>
+          </mat-card-header>
+          <hr>
+          <mat-card-content class="event-card-content">
+            
+            <div class="parentComponent">
+                <h2>Parent Component</h2>
+                <div>
+                    <span>Emitter to Child </span>
+                    <input type="textbox" [(ngModel)]='emitter'>
+                </div>
+            </div>
+                
+            <hr>
+            
+            <div class="childComponent">
+                <app-child [childToEmitter]="emitter" (childToParent)="childToParent($event)"></app-child>
+            </div>
+            
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+

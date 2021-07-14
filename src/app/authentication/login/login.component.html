@@ -1,0 +1,37 @@
+<div class="signin-content">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>My Application</mat-card-title>
+            <mat-card-subtitle>Login</mat-card-subtitle>
+          </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <mat-form-field class="full-width-input">
+                    <mat-icon matPrefix>mail</mat-icon>
+                    <input matInput placeholder="Email" formControlName="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <mat-error *ngIf="loginForm.controls.email.errors?.required" >
+                        Email is required
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.controls.email.errors?.pattern" >
+                        Enter a valid Email
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <mat-icon matPrefix>lock_outline</mat-icon>
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error *ngIf="loginForm.controls.email.errors?.required">
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </form>
+        </mat-card-content>
+        <mat-card-footer>
+            <mat-card-actions>
+                <span>Not a member?</span>
+                <button mat-button [routerLink]="['/authentication/register']">Register</button>
+            </mat-card-actions>
+        </mat-card-footer>
+    </mat-card>
+</div>
