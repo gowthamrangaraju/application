@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Services
-import { AuthService } from '../../authentication/services/auth.service';
+import { AuthService } from '../../../authentication/services/auth.service';
 
 @Component({
   selector: 'app-user-info',

@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { ChartsComponent } from './charts/charts.component';
-import { UserInfoComponent } from './user-info/user-info.component';
 
 const routes: Routes = [
   {
@@ -21,8 +20,9 @@ const routes: Routes = [
         component: ChartsComponent
       },
       {
-        path: 'usermanagement',
-        component: UserInfoComponent
+        path: 'user',
+        loadChildren: () => import('./user/user.module')
+          .then(m => m.UserModule)
       },
       {
         path: 'eventemitter',

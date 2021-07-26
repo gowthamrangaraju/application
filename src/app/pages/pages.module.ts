@@ -10,13 +10,12 @@ import { SharedModule} from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { ChartsComponent } from './charts/charts.component';
-import { UserInfoComponent } from './user-info/user-info.component';
 
 // Services
 import { AuthService } from '../authentication/services/auth.service';
 
 @NgModule({
-  declarations: [DashboardComponent, PagesComponent, ChartsComponent, UserInfoComponent],
+  declarations: [DashboardComponent, PagesComponent, ChartsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

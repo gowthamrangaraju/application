@@ -21,7 +21,10 @@ export class PagesComponent implements OnInit {
     );
 
   user: any;
-
+  isExpanded = true;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  
   constructor(
     private breakpointObserver: BreakpointObserver,
     private authService: AuthService,

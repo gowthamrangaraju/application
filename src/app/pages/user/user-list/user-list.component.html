@@ -1,0 +1,30 @@
+<div class="grid-container">
+    <h1 class="mat-h1"> Details </h1>
+    <mat-grid-list cols="4" rowHeight="60px">
+        <mat-grid-tile *ngFor="let user of userLists" [colspan]="1" [rowspan]="4">
+            
+            <mat-card class="lists-card">
+                <mat-card-header>
+                    <mat-card-title>User Details</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="lists-card-content">
+                    <ul>
+                        <li> 
+                            <span> name : </span> 
+                            <span> {{user.key}} </span> 
+                        </li>
+                        <li> 
+                            <span> value : </span> 
+                            <span> {{user.value}} </span> 
+                        </li>
+                    </ul>
+                </mat-card-content>
+                <mat-card-footer *ngIf = "check(user.name)">
+                    <button mat-raised-button [routerLink]="'/pages/user/edit/'+user.id">Edit</button>
+                    <button mat-raised-button color="primary" (click)="confirmDialog(user.id)">Delete</button>
+                </mat-card-footer>
+            </mat-card>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

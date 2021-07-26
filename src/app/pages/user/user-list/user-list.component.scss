@@ -1,0 +1,40 @@
+.grid-container {
+    margin: 20px;
+  }
+  
+  mat-card {
+    margin: 2em auto;
+    text-align: center;
+  }
+
+  .lists-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .lists-card-content {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  button{
+    margin: 5px;
+  }
+
+  ::ng-deep .mat-snack-bar-container {
+    background-color: black !important;
+    .mat-simple-snackbar {
+      color: white !important;
+    }
+    .mat-simple-snackbar-action{
+      color: #c2185b !important;
+    }
+  }

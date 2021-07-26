@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const materialModule = [
   MatToolbarModule,
@@ -25,7 +27,9 @@ const materialModule = [
   MatSidenavModule,
   MatListModule,
   MatGridListModule,
-  MatMenuModule
+  MatMenuModule,
+  MatDialogModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

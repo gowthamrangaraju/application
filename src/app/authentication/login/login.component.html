@@ -20,7 +20,7 @@
                 <mat-form-field class="full-width-input">
                     <mat-icon matPrefix>lock_outline</mat-icon>
                     <input matInput type="password" placeholder="Password" formControlName="password" required>
-                    <mat-error *ngIf="loginForm.controls.email.errors?.required">
+                    <mat-error *ngIf="loginForm.controls.password.errors?.required">
                         Password is required
                     </mat-error>
                 </mat-form-field>

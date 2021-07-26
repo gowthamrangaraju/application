@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { EventEmitterRoutingModule } from './event-emitter-routing.module';
 
 // Module
-import { ChildComponent } from './child/child.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 //Component 
 import { EventEmitterComponent } from './event-emitter.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { ChildComponent } from './child/child.component';
+
 
 
 @NgModule({
