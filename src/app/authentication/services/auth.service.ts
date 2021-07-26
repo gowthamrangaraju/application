@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +11,6 @@ export class AuthService {
 
   constructor(
     private afa: AngularFireAuth,
-    private angularFirestore: AngularFirestore,
     private router: Router,
   ) {
     this.afa.authState.subscribe((auth => {
@@ -55,7 +52,6 @@ export class AuthService {
     return this.afa.createUserWithEmailAndPassword(formValue.email, formValue.password)
       .then((user) => {
         this.authState = user;
-        this.angularFirestore.collection('users').doc(this.currentUserId).ref.set({ email: this.authState.user.email });
       })
       .catch(error => {
         throw error
